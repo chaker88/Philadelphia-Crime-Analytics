@@ -3,6 +3,9 @@
 An end-to-end analysis of ~3.5 million Philadelphia Police Department crime incidents (2006 to present):
 a small ETL pipeline, an exploratory data analysis notebook, and an interactive Dash dashboard.
 
+**Live dashboard: [philadelphia-crime-dashboard.onrender.com](https://philadelphia-crime-dashboard.onrender.com/)**
+(hosted on Render's free plan, so the first load after a period of inactivity can take about a minute)
+
 ## Project structure
 
 ```
@@ -65,11 +68,11 @@ committed, so the dashboard works from a fresh clone without steps 1-4; re-run t
 
 ## Deployment (Render)
 
-The repo includes a [Render Blueprint](https://render.com/docs/blueprint-spec) (`render.yaml`):
+The dashboard is deployed at <https://philadelphia-crime-dashboard.onrender.com/> from the `main` branch using the
+[Render Blueprint](https://render.com/docs/blueprint-spec) in `render.yaml`. Every merge into `main` redeploys it.
 
-1. Push the repo to GitHub.
-2. In Render, choose **New > Blueprint** and select the repository (or create a **Web Service** manually with
-   the settings below).
+To deploy your own copy: in Render, choose **New > Blueprint**, select the repository and the `main` branch.
+Render reads `render.yaml` and creates the service with these settings:
 
 | Setting | Value |
 |---|---|
@@ -80,6 +83,8 @@ The repo includes a [Render Blueprint](https://render.com/docs/blueprint-spec) (
 On the free plan the service sleeps after inactivity, so the first visit after a while takes some extra time to load.
 
 ## Dashboard
+
+[Open the live dashboard](https://philadelphia-crime-dashboard.onrender.com/)
 
 - Filters for year range and crime types
 - KPI tiles: total incidents, share at night, peak hour, busiest district
