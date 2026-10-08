@@ -1,12 +1,16 @@
 [project]
 name = "phil-crime"
 version = "0.1.0"
-description = "Add your description here"
+description = "ETL, exploratory analysis and an interactive dashboard of Philadelphia crime incidents (2006-present)"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "dash>=4.4.1",
     "ipykernel>=7.3.0",
+    "matplotlib>=3.11.2",
+    "nbformat>=5.11.1",
     "numpy>=2.5.0",
     "pandas>=3.0.3",
+    "plotly>=7.1.0",
     "requests>=2.34.2",
 ]

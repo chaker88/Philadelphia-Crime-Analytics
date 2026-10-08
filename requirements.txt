@@ -1,0 +1,6 @@
+# Runtime dependencies for the deployed dashboard (Render).
+# The full development environment (notebook, data scripts) is defined in pyproject.toml / uv.lock.
+dash==4.4.1
+pandas==3.0.3
+plotly==7.1.0
+gunicorn==26.2.0

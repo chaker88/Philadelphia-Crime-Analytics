@@ -220,7 +220,13 @@ __marimo__/
 
 
 .vscode/
-.python-version
+# .python-version
 
 # datasets
 *.csv
+# data files (raw/cleaned CSVs, district boundaries, dashboard cache) are generated locally
+data/*
+!data/.gitkeep
+
+# small pre-aggregated data the deployed dashboard needs (exception to *.csv above)
+!dashboard/data/*.csv
