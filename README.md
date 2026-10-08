@@ -75,7 +75,7 @@ The repo includes a [Render Blueprint](https://render.com/docs/blueprint-spec) (
 |---|---|
 | Runtime | Python 3 (`PYTHON_VERSION=3.13.9`) |
 | Build command | `pip install -r requirements.txt` |
-| Start command | `gunicorn --chdir dashboard app:server --bind 0.0.0.0:$PORT --workers 2 --timeout 120` |
+| Start command | `gunicorn dashboard.app:server --bind 0.0.0.0:$PORT --workers 2 --timeout 120` |
 
 On the free plan the service sleeps after inactivity, so the first visit after a while takes some extra time to load.
 

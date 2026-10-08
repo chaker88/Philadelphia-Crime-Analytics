@@ -1,12 +1,17 @@
 """Philadelphia crime incidents dashboard.
 
 Local:       uv run python dashboard/app.py   then open http://127.0.0.1:8050
-Production:  gunicorn --chdir dashboard app:server
+Production:  gunicorn dashboard.app:server
 """
+
+import os
+import sys
 
 from dash import Dash, Input, Output, dcc, html
 
-import plots
+# make plots.py importable however the app is started (python, gunicorn, from any directory)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import plots  # noqa: E402
 
 # --- data (loaded once at startup) ---
 data = plots.load_data()
